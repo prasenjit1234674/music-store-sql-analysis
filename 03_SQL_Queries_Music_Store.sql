@@ -46,7 +46,7 @@ GROUP BY customer.first_name,customer.last_name
 ORDER BY total DESC;
 
 
---Question Set 2 – Moderate--
+--Question Set 2 â€“ Moderate--
 
 
 --1. Write query to return the email, first name, last name, & Genre of all Rock Music 
@@ -91,7 +91,7 @@ WHERE milliseconds>(
 ORDER BY milliseconds DESC;
 
 
---Question Set 3 – Advance--
+--Question Set 3 â€“ Advance--
 
 
 --1. Find how much amount spent by each customer on artists? Write a query to return 
