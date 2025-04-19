@@ -49,15 +49,13 @@ GROUP BY g.Name
 ORDER BY Total_Purchases DESC;
 ```
 
-## 📊 Key Insights
+## 📘 Final Report (Google Drive Link)
 
-- 🎧 Top Genre: Rock is the most purchased genre
-- 🌆 Top City: Prague generated the highest sales
-- 💰 Top Customer: Richard Cunningham spent the most
-- 📂 Playlists: Music playlist distribution identified
-- 👨‍💼 Employee Reports: Reporting structure mapped
+Due to GitHub’s PDF preview limitations, you can view the insights report via Google Drive:
 
-📘 See full insights → `05_Music_Store_Insights_Report.pdf`
+🔗 [📥 Click here to view Final Insights Report (Google Drive)](https://drive.google.com/file/d/1FGfJOREu5oKAF-F4r51uv9CCWDFoWt-X/view?usp=sharing)
+
+📄 The original PDF is also available in the repo: `05_Music_Store_Insights_Report.pdf`
 
 ## 🛠 Technologies Used
 
@@ -74,4 +72,4 @@ I enjoy solving problems with data and turning raw numbers into clear, actionabl
 🔗 [GitHub](https://github.com/prasenjit1234674)  
 🔗 [LinkedIn](https://www.linkedin.com/in/prasenjit-barman-968283359/)
 
-> ⭐ If you found this project helpful, feel free to give it a star and check out more on my GitHub!
+> ⭐ If you found this project helpful, feel free to give it a star and explore more on my GitHub!
