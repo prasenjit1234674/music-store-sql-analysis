@@ -1,64 +1,77 @@
 # 🎵 Music Store SQL Analysis
 
-This project demonstrates the use of SQL to perform data analysis on a fictional music store database. The analysis helps answer critical business questions related to customer behavior, music trends, sales performance, and employee records.
+This project showcases the use of SQL to analyze a fictional music store database. It involves answering real-world business questions using SQL queries and documenting key insights related to customer behavior, music preferences, and sales performance.
 
 ## 📌 Project Highlights
 
-- 📊 Tool Used: Microsoft SQL Server
-- 🗃️ Dataset: 11 CSV files covering customers, employees, invoices, genres, playlists, and tracks
-- 🧠 Focus: SQL joins, aggregations, subqueries, window functions, filtering & sorting
-- 📄 Documentation: PDF-based business questions and insights report included
+- 🔍 Project Type: SQL Data Analysis (Personal Project)
+- 🗃️ Dataset: 11 CSV files including Customers, Invoices, Tracks, Albums, Genres, Employees, etc.
+- 🧰 Tools Used: Microsoft SQL Server, Git & GitHub
+- 📄 Deliverables: SQL Queries, Business Questions, Final Insight Report (PDF)
 
-## 📁 Project Structure
+## 📁 Folder Structure
 
-music-store-sql-analysis/ ├── 01_Music_Store_Database_Schema.png ├── 02_Music_Store_Dataset/ ├── 03_SQL_Queries_Music_Store.sql ├── 04_Music_Store_Analysis_Questions.pdf ├── 05_Music_Store_Insights_Report.pdf
-
+```
+music-store-sql-analysis/
+├── 01_Music_Store_Database_Schema.png
+├── 02_Music_Store_Dataset/
+├── 03_SQL_Queries_Music_Store.sql
+├── 04_Music_Store_Analysis_Questions.pdf
+├── 05_Music_Store_Insights_Report.pdf
+```
 
 ## 🎯 Objectives
 
-- Import CSV datasets into SQL Server  
-- Understand schema relationships  
+- Import CSV files into SQL Server  
+- Understand relational database schema  
 - Write and execute optimized SQL queries  
-- Generate actionable business insights  
-- Document the process in a professional report
+- Answer key business questions  
+- Generate insights and document findings
 
-## 💡 Sample Questions Answered
+## 🧠 Business Questions Answered
 
-- Which genres are most popular by number of purchases?
-- Which city generated the most revenue?
-- Which customers are top spenders?
-- Who are the employees and who do they report to?
+- What are the top 3 most purchased music genres?
+- Which cities generated the highest revenue?
+- Who are the top spending customers?
 - What is the distribution of tracks across playlists?
+- What is the employee reporting structure?
 
-## 🧰 Tools & Technologies Used
+📄 Full list available in: `04_Music_Store_Analysis_Questions.pdf`
 
-- SQL Server (Querying & Analysis)
-- DB Browser / SSMS (for database work)
-- Git & GitHub (Version control)
-- VS Code / Notepad++ (Query editing)
-- PDF & Canva (Reporting)
-
-## 📌 Sample SQL Query
+## 💡 Sample SQL Query
 
 ```sql
-SELECT c.FirstName + ' ' + c.LastName AS Customer,
-       SUM(i.Total) AS Total_Spent
-FROM Invoice i
-JOIN Customer c ON i.CustomerId = c.CustomerId
-GROUP BY c.FirstName, c.LastName
-ORDER BY Total_Spent DESC;
-📎 Reports & Deliverables
-🔍 04_Music_Store_Analysis_Questions.pdf — A list of 15+ analysis questions
+SELECT g.Name AS Genre, COUNT(il.Quantity) AS Total_Purchases
+FROM InvoiceLine il
+JOIN Track t ON il.TrackId = t.TrackId
+JOIN Genre g ON t.GenreId = g.GenreId
+GROUP BY g.Name
+ORDER BY Total_Purchases DESC;
+```
 
-📑 05_Music_Store_Insights_Report.pdf — Clean insights, KPIs, and charts
+## 📊 Key Insights
 
-🧾 03_SQL_Queries_Music_Store.sql — All SQL queries used
+- 🎧 Top Genre: Rock is the most purchased genre
+- 🌆 Top City: Prague generated the highest sales
+- 💰 Top Customer: Richard Cunningham spent the most
+- 📂 Playlists: Music playlist distribution identified
+- 👨‍💼 Employee Reports: Reporting structure mapped
 
-🧭 01_Music_Store_Database_Schema.png — Database schema visualization
+📘 See full insights → `05_Music_Store_Insights_Report.pdf`
 
-🙋‍♂️ About Me
-Hi, I'm Prasenjit Barman, an aspiring Data Analyst skilled in SQL, Power BI, Excel, and Python.
-I love exploring real-world datasets and converting raw data into valuable business insights.
+## 🛠 Technologies Used
 
-📎 My GitHub
-📎 My LinkedIn
+- SQL Server – Querying and analysis
+- Git & GitHub – Version control and project hosting
+- DB Diagram – Schema visualization
+- Canva/PDF – Reporting
+
+## 🙋‍♂️ About Me
+
+Hi! I'm **Prasenjit Barman**, an aspiring Data Analyst skilled in SQL, Power BI, Excel, and Python.  
+I enjoy solving problems with data and turning raw numbers into clear, actionable insights.
+
+🔗 [GitHub](https://github.com/prasenjit1234674)  
+🔗 [LinkedIn](https://www.linkedin.com/in/prasenjit-barman-968283359/)
+
+> ⭐ If you found this project helpful, feel free to give it a star and check out more on my GitHub!
